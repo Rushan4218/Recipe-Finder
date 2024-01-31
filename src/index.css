@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Itim&family=Pacifico&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Handlee", cursive;
+}
+
+body {
+    background-color: #3f6844;
+}
+
+.main-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+}
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.title {
+    font-family: "pacifico", cursive;
+    font-size: 3rem;
+    color: #FAF1CF;
+    -webkit-text-stroke: .5px white;
+}
+.sub-title {
+    font-family: "Itim", cursive;
+    font-size: .9rem;
+    color: #FAF1CF;
+    text-align: right;
+    margin-top: -20px;
+}
+.form-search {
+    display: flex;
+    width: 400px;
+}
+.search-box {
+    background-color: #c5e8c9;
+    flex: 1;
+    border: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 40px;
+    border: 2px solid rgb(5, 75, 6);
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: rgb(67, 66, 66);
+}
+.search-box:focus {
+    outline: none;
+}
+.search-btn {
+    background-color: #c5e8c9;
+    width: 60px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-btn:hover {
+    cursor: pointer;
+    background-color: #b7d8ba;
+}
+.search-btn:active {
+    background-color: #accaae;
+}
+.search-btn-icon {
+    color: #3f6844;
+}
+
+.item-container {
+    position: relative;
+    margin-top:  50px;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(160px, 200px));
+    grid-gap: 5px;
+    overflow: auto;
+    max-height: 500px;
+    border-radius: 20px;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color:  #3f6844;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #c5e8c9;
+    border-radius: 10px;
+}
+@media (min-width: 800px) {
+    .item-grid {
+        grid-template-columns: repeat(4, minmax(170px, 230px));
+    }
+}
+.single-item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #FAF1CF;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: transform 0.4s;
+}
+.single-item:hover {
+    cursor: pointer;
+}
+.single-item:active {
+    transform: scale(0.8);
+}
+.item-image {
+    max-width: 100%;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(91, 113, 11, 0.8);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    height: 520px;
+    width: 100%;
+    padding: 20px;
+    overflow: auto;
+    color: white;
+    position: relative;
+}
+
+.details-img {
+    width: 200px;
+    align-self: center;
+    border-radius: 10px;
+}
+.details-title {
+    font-size: 1.5rem;
+    align-self: center;
+}
+.details-subtitle {
+    font-size: 1.2rem;
+}
+.ingredient-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 700px) {
+    .ingredient-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.content {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 47, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px 0 0;
+    height: 35px;
+    width: 40px;
+    border-radius: 10px;
+    font-size: 2rem;
+    box-shadow: 0px 0px 5px 1px rgb(75, 38, 38);
+    transition: transform .3s;
+}
+.close-button:hover {
+    cursor: pointer;
+}
+.close-button:active {
+    transform: scale(.8);
+    box-shadow: 0px 0px 3px 1px rgb(75, 38, 38);
+}
+.close-button-icon {
+    color: white;
+}
