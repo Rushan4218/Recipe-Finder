@@ -29,8 +29,11 @@ const Details: React.FC<detailsProps> = ({ itemDetails, setShowDetails }) => {
                     })
                 }
             </ul>
-            <h2 className="details-subtitle"></h2>
-            <p className="content">{itemDetails.instructions}</p>
+            <h2 className="details-subtitle">Instructions</h2>
+            <p 
+                className="content" 
+                dangerouslySetInnerHTML={{ __html: itemDetails.instructions }}
+            ></p>
         </div>
     )
 }
